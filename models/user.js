@@ -9,7 +9,7 @@ const userSchema=mongoose.Schema({
     },
     email:{
         type:String,
-        requried:true,
+        required:true,
        validate:{ validator:(value)=>{
             const regex=/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             return value.match(regex)
@@ -28,7 +28,6 @@ const userSchema=mongoose.Schema({
     },
     location:{
         type:locationSchema,
-        default:""
     },
     type:{
         type:String,
